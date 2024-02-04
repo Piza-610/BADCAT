@@ -6,10 +6,11 @@ services:
         image: badcat-app
         container_name: badcat-app
         ports:
-            - '8080:8080'
+            - '8080:80'
         volumes:
             - ./src:/var/www/html
-        privileged: true
+        privileged:
+            true
         depends_on:
             - db
 
@@ -22,6 +23,7 @@ services:
             MYSQL_PASSWORD: user
             MYSQL_ROOT_PASSWORD: badcat
         volumes:
+            - ./sql/myconf/my.cnf:/etc/mysql/conf.d/my.cnf
             - mysql-data-volume:/var/lib/mysql
             - ./badcat/db/sql:/docker-entrypoint-initdb.d
         ports:

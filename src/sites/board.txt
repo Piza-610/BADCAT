@@ -1,0 +1,11 @@
+<hr>
+<p><img src="../img/board_pic/board_cat9.png" class="bcat_pic">piza | 2024年01月18日 22:30</p>
+<p>taro</p>
+<hr>
+<p><img src="../img/board_pic/board_cat6.png" class="bcat_pic">piza | 2024年02月04日 22:54</p>
+<p>たなか<br />
+</p>
+<hr>
+<p><img src="../img/board_pic/board_cat7.png" class="bcat_pic">piza | 2024年02月04日 22:54</p>
+<p>こんにちは<br />
+アスランです。</p>
