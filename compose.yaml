@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+    app:
+        build: ./badcat/apache
+        image: badcat-app
+        container_name: badcat-app
+        ports:
+            - '8080:8080'
+        volumes:
+            - ./src:/var/www/html
+        privileged: true
+        depends_on:
+            - db
+
+    db:
+        build: ./badcat/db
+        image: badcat-db
+        container_name: badcat-db
+        environment:
+            MYSQL_USER: user
+            MYSQL_PASSWORD: user
+            MYSQL_ROOT_PASSWORD: badcat
+        volumes:
+            - mysql-data-volume:/var/lib/mysql
+            - ./badcat/db/sql:/docker-entrypoint-initdb.d
+        ports:
+            - '3306:3306'
+
+volumes:
+    mysql-data-volume:
+        name: badcat-mysql

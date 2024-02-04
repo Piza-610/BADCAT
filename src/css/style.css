@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*全体*/
+header {
+    display: flex;
+    height: 50px;
+    background-color: #b9e877;
+    border: 1px solid #838b0d;
+}
+.login_and_register{
+    margin-left: 550px;
+}
+.logo{
+    width: 150px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+  
+.sidebar {
+    width: 170px;
+    border: 1px solid blue;
+    background-color: lightgrey;
+}
+  
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #d6ecd4;
+}
+
+footer{
+    height: 48px;
+    background-color: #b9e877;
+    border: 1px solid #838b0d
+}
+
+/*ホーム画面*/
+.home_pic{
+    width: 600px;
+}
+
+/*ログイン画面*/
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+/*会員登録画面*/
+.sinup{
+    display: flex;
+    justify-content: center;
+}
+
+/*掲示板*/
+.board_form{
+    vertical-align: top;
+}
+
+.bcat_pic{
+    width: 30px;
+    margin-bottom: -10px;
+}
