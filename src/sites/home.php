@@ -22,7 +22,7 @@
         </div>
         <div class="content">
             <p>ようこそ！！BATCATへ！！<br>
-            <img src="../img/main/cat01.jpg" class="home_pic"><br>
+            <img src="../img/main/home_cat.jpg" class="home_pic"><br>
             データベースをリセットできます。<br>
             掲示板をリセットできます。<br>
         </div>

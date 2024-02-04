@@ -32,3 +32,5 @@ services:
 volumes:
     mysql-data-volume:
         name: badcat-mysql
+
+#  mysql -u root -p --port 3006
