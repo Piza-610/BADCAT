@@ -1,10 +1,10 @@
 ## ローカルの落とし方
 - git clone コマンドで手元に落としてくる
-`https://github.com/Piza-610/SAMPLE_CAT.git`
+`git clone https://github.com/Piza-610/BADCAT.git`
 
 ## サーバの立ち上げからアクセスまで
 1. cd コマンドでディレクトリを移動する。
-`cd SAMPLE_CAT`
+`cd BADCAT`
 
 2. docker compose で立ち上げる。
 `docker compose up -d`
