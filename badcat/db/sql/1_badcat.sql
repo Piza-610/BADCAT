@@ -3,20 +3,20 @@ DROP DATABASE IF EXISTS badcat;
 CREATE DATABASE badcat;
 use badcat;
 
-DROP TABLE IF EXISTS userinfo, catsinfo,storeitems;
+DROP TABLE IF EXISTS userinfo, catsinfo, storeitems;
 
 CREATE TABLE `userinfo` (
-  `id` int(11) NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `userid` varchar(64) NOT NULL,
   `passwd` varchar(64) NOT NULL,
   `email` varchar(64) NOT NULL,
   `super` varchar(2) NOT NULL DEFAULT 'U'
 );
 
-INSERT INTO `userinfo` (`id`, `userid`, `passwd`, `email`, `super`) VALUES
-(1, 'admin', 'passwd', 'root@example.jp', 'A'),
-(2, 'badcat', '1234', 'badcat@example.jp', 'U'),
-(3, 'nyanko', '2525', 'nekonyan@example.jp', 'U');
+INSERT INTO `userinfo` (`userid`, `email`, `passwd`, `super`) VALUES
+('admin', 'root@example.jp', 'passwd', 'A'),
+('badcat', 'badcat@example.jp', '1234', 'U'),
+('nyanko', 'nekonyan@example.jp', '2525', 'U');
 
 CREATE TABLE `catsinfo` (
   `id` int(11) NOT NULL,

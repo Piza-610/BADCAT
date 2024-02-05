@@ -9,10 +9,10 @@
 <img src="../img/main/logo2.png" style="display: block; margin: auto; margin-bottom:-100px;">
     <div class="login">
     <form action="home.php" method="POST">
-        <label for="login-id">アカウント名</label>
-        <input id="login-id" name="username" type="text" placeholder="メールアドレス"><br>
+        <label for="login-id">メールアドレス</label>
+        <input id="login-id" name="email" type="text"><br>
         <label for="login-pass">パスワード</label>
-        <input id="login-pass" name="password" type="password" placeholder="パスワード"><br>
+        <input id="login-pass" name="passwd" type="password"><br>
         <button name="login" type="submit">ログイン</button>
     </form>
     </div>
