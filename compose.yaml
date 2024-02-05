@@ -18,12 +18,13 @@ services:
         build: ./badcat/db
         image: badcat-db
         container_name: badcat-db
+        restart: always
         environment:
             MYSQL_USER: user
             MYSQL_PASSWORD: user
             MYSQL_ROOT_PASSWORD: badcat
         volumes:
-            - ./sql/myconf/my.cnf:/etc/mysql/conf.d/my.cnf
+            - ./badcat/db/myconf/my.cnf:/etc/mysql/conf.d/my.cnf
             - mysql-data-volume:/var/lib/mysql
             - ./badcat/db/sql:/docker-entrypoint-initdb.d
         ports:

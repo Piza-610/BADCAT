@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS badcat;
 CREATE DATABASE badcat;
 use badcat;
 
-DROP TABLE IF EXISTS userinfo, catsinfo;
+DROP TABLE IF EXISTS userinfo, catsinfo,storeitems;
 
 CREATE TABLE `userinfo` (
   `id` int(11) NOT NULL,
@@ -20,11 +20,11 @@ INSERT INTO `userinfo` (`id`, `userid`, `passwd`, `email`, `super`) VALUES
 
 CREATE TABLE `catsinfo` (
   `id` int(11) NOT NULL,
-  `photos` varchar(64) NOT NULL,
-  `cname` varchar(64) NOT NULL,
-  `birth` varchar(64) NOT NULL,
+  `photos` varchar(32) NOT NULL,
+  `cname` varchar(32) NOT NULL,
+  `birth` varchar(32) NOT NULL,
   `age` int(11) NOT NULL,
-  `patten` varchar(64) NOT NULL,
+  `patten` varchar(32) NOT NULL,
   `about` varchar(64) NOT NULL  
 );
 
@@ -40,12 +40,23 @@ INSERT INTO `catsinfo` (`id`, `photos`, `cname`, `birth`, `age`,`patten`,`about`
 
 CREATE TABLE `storeitems` (
   `id` int(11) NOT NULL,
-  `iname` varchar(64) NOT NULL,
+  `iname` varchar(32) NOT NULL,
   `values` int(11) NOT NULL,
-  `photos` varchar(64) NOT NULL
+  `photos` varchar(32) NOT NULL,
+  `stock` int(11) NOT NULL DEFAULT 0
 );
 
-INSERT INTO `storeitems` (`id`, `iname`, `values`, `photos`) VALUES
-(1, 'cap', '10', 'item_01.jpg'),
-(2, 'book', '5', 'item_02.jpg'),
-(3, 'cushion', '7', 'item_03.jpg');
+INSERT INTO `storeitems` (`id`, `iname`, `values`, `photos`,`stock`) VALUES
+(1, 'cap', '6', 'item_01.jpg',13),
+(2, 'book', '5', 'item_02.jpg',5),
+(3, 'cushion', '7', 'item_03.jpg',10),
+(4, 'curry', '5', 'item_04.jpg',7),
+(5, 'photo''stand', '10', 'item_05.jpg',6),
+(6, 'poteto', '3', 'item_06.jpg',17),
+(7, 'tea', '4', 'item_07.jpg',14),
+(8, 'coffe', '4', 'item_08.jpg',14),
+(9, 'cookie', '3', 'item_09.jpg',17),
+(10, 'cream puff', '4', 'item_10.jpg',4),
+(11, 'waffle', '4', 'item_11.jpg',8),
+(12, 'dogfood', '7', 'item_12.jpg',0),
+(13, 'toy', '7', 'item_13.jpg',0);
