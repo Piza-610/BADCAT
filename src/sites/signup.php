@@ -6,7 +6,7 @@ $_SESSION = array();    //セッションを全て空にする
 if (!empty($_POST)) {
     $userid = $_POST['userid'];
     $email = $_POST['email'];
-    $passwd = password_hash($_POST['passwd'], PASSWORD_DEFAULT);
+    $passwd =  md5($_POST['passwd']);
     $super = 'U';
 
     /* メールアドレスの重複を検知 */

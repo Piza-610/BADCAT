@@ -8,8 +8,8 @@ DROP TABLE IF EXISTS userinfo, catsinfo, storeitems;
 CREATE TABLE `userinfo` (
   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `userid` varchar(64) NOT NULL,
-  `passwd` varchar(64) NOT NULL,
   `email` varchar(64) NOT NULL,
+  `passwd` varchar(64) NOT NULL,
   `super` varchar(2) NOT NULL DEFAULT 'U'
 );
 
