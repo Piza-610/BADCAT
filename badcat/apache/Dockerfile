@@ -11,3 +11,4 @@ RUN apt-get update && apt-get install -y  \
     libpng-dev		\
     && docker-php-ext-install -j$(nproc) mysqli
 
+RUN docker-php-ext-install pdo_mysql
