@@ -14,9 +14,9 @@ CREATE TABLE `userinfo` (
 );
 
 INSERT INTO `userinfo` (`userid`, `email`, `passwd`, `super`) VALUES
-('admin', 'root@example.jp', 'passwd', 'A'),
-('badcat', 'badcat@example.jp', '1234', 'U'),
-('nyanko', 'nekonyan@example.jp', '2525', 'U');
+('admin', 'root@example.jp', '76a2173be6393254e72ffa4d6df1030a', 'A'),
+('badcat', 'badcat@example.jp', '81dc9bdb52d04dc20036dbd8313ed055', 'U'),
+('nyanko', 'nekonyan@example.jp', '9407c826d8e3c07ad37cb2d13d1cb641', 'U');
 
 CREATE TABLE `catsinfo` (
   `id` int(11) NOT NULL,

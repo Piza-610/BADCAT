@@ -1,7 +1,6 @@
 <?php 
 require("./dbconnect.php");
 session_start();
-$_SESSION = array();    //セッションを全て空にする
 
 if (!empty($_POST)) {
     $userid = $_POST['userid'];
@@ -30,6 +29,8 @@ if (!empty($_POST)) {
             $passwd,
             $super
         ));
+        $_SESSION['userid'] = $userid;
+        $_SESSION['super'] = $super;
         header('Location: ./home.php');   // home.phpへ移動
         exit();
     }
